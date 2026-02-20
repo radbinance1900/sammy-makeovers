@@ -3,118 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sammy Makeovers | Bridal, Party & Signature Styles</title>
+    <title>Sammy Makeovers | Timeless Beauty</title>
     <style>
         :root {
-            --primary: #d4a373; /* Champagne Gold */
-            --secondary: #faedcd; /* Soft Cream */
-            --dark: #1b1b1b;
-            --text: #333;
+            --gold: #D4AF37;
+            --blush: #FFF5F5;
+            --dark: #2D2D2D;
             --white: #ffffff;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Playfair Display', serif; }
-        body { background-color: var(--secondary); color: var(--text); line-height: 1.6; }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            color: var(--dark);
+            line-height: 1.6;
+        }
 
-        /* Navigation */
-        nav {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 1rem 5%;
+        header {
+            background: var(--white);
+            padding: 20px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            border-bottom: 1px solid #eee;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        .logo { font-size: 1.8rem; font-weight: bold; color: var(--primary); letter-spacing: 2px; }
-        .nav-links a { text-decoration: none; color: var(--dark); margin-left: 2rem; font-weight: 500; transition: 0.3s; }
-        .nav-links a:hover { color: var(--primary); }
 
-        /* Hero Section */
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            margin-left: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
         .hero {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80&w=1920') no-repeat center center/cover;
             height: 80vh;
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
-                        url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=2080&auto=format&fit=crop') center/cover;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            color: var(--white);
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            background: var(--gold);
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #b8962d;
+        }
+
+        .services {
+            padding: 80px 10%;
             text-align: center;
         }
-        .hero h1 { font-size: 4rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-        .btn { padding: 1rem 2.5rem; background: var(--primary); color: var(--white); text-decoration: none; border-radius: 50px; font-weight: bold; transition: 0.3s; }
-        .btn:hover { background: var(--dark); transform: scale(1.05); }
 
-        /* Services */
-        .services { padding: 5rem 5%; text-align: center; }
-        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; }
-        .service-card { background: var(--white); padding: 2rem; border-radius: 15px; transition: 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-        .service-card:hover { transform: translateY(-10px); }
-        .service-card h3 { color: var(--primary); margin-bottom: 1rem; }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
 
-        /* Gallery */
-        .gallery { padding: 5rem 5%; background: var(--white); }
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
-        .gallery-item { height: 350px; border-radius: 10px; overflow: hidden; }
-        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
-        .gallery-item img:hover { scale: 1.1; }
+        .service-card {
+            padding: 30px;
+            background: var(--blush);
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
 
-        /* Footer */
-        footer { background: var(--dark); color: var(--white); padding: 3rem 5%; text-align: center; }
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card h3 {
+            color: var(--gold);
+            font-family: 'Playfair Display', serif;
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 
-    <nav>
-        <div class="logo">SAMMY MAKEOVERS</div>
-        <div class="nav-links">
+    <header>
+        <div class="logo">Sammy Makeovers</div>
+        <nav>
+            <a href="#about">About</a>
             <a href="#services">Services</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Book Now</a>
+        </nav>
+    </header>
 
     <section class="hero">
-        <h1>Your Glow, Our Mission.</h1>
-        <p style="font-size: 1.2rem; margin-bottom: 2rem;">Redefining Beauty for the Modern Bride & Party Star.</p>
-        <a href="#contact" class="btn">Book Your Session</a>
+        <h1>Unveil Your Radiance</h1>
+        <p>Expert Bridal, Party & Luxury Beauty Services</p><br>
+        <a href="#contact" class="btn">BOOK AN APPOINTMENT</a>
     </section>
 
     <section id="services" class="services">
-        <h2>Our Exclusive Services</h2>
-        <div class="service-grid">
+        <h2>Our Signature Services</h2>
+        <div class="services-grid">
             <div class="service-card">
                 <h3>Bridal Look</h3>
-                <p>Traditional to Contemporary. We specialize in HD & Airbrush techniques for that 18-hour radiance.</p>
+                <p>Timeless, elegant, and photo-ready makeup tailored for your big day.</p>
             </div>
             <div class="service-card">
                 <h3>Party Glam</h3>
-                <p>Be the center of attention with our 2026 Trend looks: Metallic lids, Glossy lips, and Glass skin.</p>
+                <p>Turn heads at any event with our sophisticated evening and party looks.</p>
             </div>
             <div class="service-card">
-                <h3>Signature Maneuver</h3>
-                <p>Our unique hair & facial contouring "maneuvers" designed to enhance your natural bone structure.</p>
+                <h3>Manicure & Spa</h3>
+                <p>Complete your transformation with luxury nail art and relaxing hand treatments.</p>
+            </div>
+            <div class="service-card">
+                <h3>Editorial Hair</h3>
+                <p>From sleek buns to bohemian waves, we style hair that tells a story.</p>
             </div>
         </div>
     </section>
 
-    <section id="gallery" class="gallery">
-        <h2 style="text-align: center; margin-bottom: 3rem;">Portfolio</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=2071&auto=format&fit=crop" alt="Bridal Makeup"></div>
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=1935&auto=format&fit=crop" alt="Party Look"></div>
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?q=80&w=2070&auto=format&fit=crop" alt="Eyeshadow Detail"></div>
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1620331311520-246422fd82f9?q=80&w=1974&auto=format&fit=crop" alt="Hair Styling"></div>
-        </div>
-    </section>
-
-    <footer id="contact">
-        <h2>Get in Touch</h2>
-        <p>123 Beauty Lane, Greater Noida | Phone: +91 98XXX XXXXX</p>
+    <footer>
         <p>&copy; 2026 Sammy Makeovers. All Rights Reserved.</p>
+        <p>Follow us on Instagram | Facebook</p>
     </footer>
 
 </body>
