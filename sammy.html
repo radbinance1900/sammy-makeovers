@@ -3,212 +3,292 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sammy Makeovers | Bridal & Party Excellence</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Sammy Makeovers - Bridal, Party & More in Wardha</title>
     <style>
-        :root {
-            --primary: #d4af37; /* Gold */
-            --accent: #f8e8e8;  /* Soft Pink/Champagne */
-            --dark: #2c2c2c;
-            --white: #ffffff;
-        }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
-            font-family: 'Poppins', sans-serif;
-            color: var(--dark);
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            background-color: #fffafb;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         }
-
-        /* Navigation */
-        nav {
-            background: var(--white);
-            padding: 1rem 10%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: var(--primary);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-        }
-
-        .nav-links li {
-            margin-left: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
-            transition: 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 80vh;
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-                        url('https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&q=80&w=1920') center/cover;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: var(--white);
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 0 20px;
         }
-
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2.5rem, 5vw, 4rem);
+        header {
+            background: linear-gradient(to right, #ff6b6b, #feca57);
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        nav {
+            background: rgba(255,255,255,0.95);
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ff6b6b;
+        }
+        .hero {
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f8bbd9" width="1200" height="600"/><text x="600" y="300" font-size="40" text-anchor="middle" fill="%23c2185b" font-family="Arial">Bridal Glamour</text></svg>') center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+        }
+        .hero-content {
+            z-index: 1;
+            max-width: 800px;
+        }
+        .hero h2 {
+            font-size: 3rem;
             margin-bottom: 1rem;
         }
-
         .hero p {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            letter-spacing: 3px;
-            text-transform: uppercase;
+            font-size: 1.5rem;
         }
-
-        .btn {
-            background: var(--primary);
-            color: white;
-            padding: 1rem 2.5rem;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: 0.3s;
-            border: none;
-            cursor: pointer;
+        section {
+            padding: 4rem 0;
         }
-
-        .btn:hover {
-            background: #b8962d;
-            transform: translateY(-2px);
-        }
-
-        /* Services Section */
-        .services {
-            padding: 5rem 10%;
+        h2 {
             text-align: center;
-        }
-
-        .section-title {
-            font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
             margin-bottom: 3rem;
+            color: #ff6b6b;
         }
-
-        .grid {
+        .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
+            margin-bottom: 3rem;
         }
-
-        .card {
-            background: var(--white);
+        .service-card {
+            background: white;
+            padding: 2rem;
             border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transition: 0.3s;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
-
-        .card:hover {
+        .service-card:hover {
             transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
         }
-
-        .card img {
+        .service-card img {
             width: 100%;
-            height: 350px;
+            height: 250px;
             object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
         }
-
-        .card-content {
-            padding: 1.5rem;
+        .service-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #333;
         }
-
-        .card h3 {
-            margin-bottom: 0.5rem;
-            color: var(--primary);
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
         }
-
-        /* Info Section */
-        .info-bar {
-            background: var(--accent);
-            padding: 4rem 10%;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            text-align: center;
+        .gallery img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            cursor: pointer;
         }
-
-        .info-item {
-            flex: 1;
-            min-width: 250px;
-            margin: 1rem;
+        .gallery img:hover {
+            transform: scale(1.05);
         }
-
-        /* Footer */
-        footer {
-            background: var(--dark);
-            color: var(--white);
-            padding: 4rem 10% 2rem;
-            text-align: center;
-        }
-
         .address {
-            margin-top: 1.5rem;
-            font-style: italic;
-            opacity: 0.8;
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 0 auto;
         }
-
-        /* Responsive Fix */
+        .address h3 {
+            font-size: 2rem;
+            color: #ff6b6b;
+            margin-bottom: 1rem;
+        }
+        .address p {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .contact {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, #ff6b6b, #feca57);
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.3s;
+            margin: 0.5rem;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
         @media (max-width: 768px) {
-            .nav-links {
-                display: none; /* Mobile menu can be added here */
+            .hero h2 {
+                font-size: 2rem;
             }
-            .hero h1 { font-size: 2.5rem; }
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
         }
     </style>
 </head>
 <body>
+    <header>
+        <div class="container">
+            <h1>✨ Sammy Makeovers ✨</h1>
+            <p>Your Premier Destination for Bridal, Party & Everyday Glam</p>
+        </div>
+    </header>
 
     <nav>
-        <a href="#home" class="logo">Sammy Makeovers</a>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="container">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </div>
     </nav>
 
-    <section class="hero" id="home">
-        <h1>Unveil Your Inner Goddess</h1>
-        <p>Premium Bridal & Party Transformations</p>
-        <a href="#contact" class="btn">Book
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Transform Your Beauty</h2>
+            <p>Professional Bridal Makeup | Party Looks | Everyday Makeovers in Wardha</p>
+        </div>
+    </section>
+
+    <section id="services" class="container">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div style="background: linear-gradient(45deg, #ff9a9e, #fecfef); height: 250px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                    <span style="font-size: 4rem;">💍</span>
+                </div>
+                <h3>Bridal Makeup</h3>
+                <p>Flawless bridal looks that last all wedding functions. HD makeup, airbrush techniques, traditional & modern styles.</p>
+            </div>
+            <div class="service-card">
+                <div style="background: linear-gradient(45deg, #a8edea, #fed6e3); height: 250px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                    <span style="font-size: 4rem;">🎉</span>
+                </div>
+                <h3>Party Makeup</h3>
+                <p>Stunning party looks for sangeet, reception, engagements. Smokey eyes, bold lips, glamorous styles.</p>
+            </div>
+            <div class="service-card">
+                <div style="background: linear-gradient(45deg, #ffecd2, #fcb69f); height: 250px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                    <span style="font-size: 4rem;">💄</span>
+                </div>
+                <h3>Everyday Makeovers</h3>
+                <p>Office looks, casual glam, salon services including hair styling, nail art, and complete makeovers.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="container">
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <!-- Authentic-looking placeholder images based on bridal/party themes from web searches [web:1][web:3] -->
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjRkY5QTlFIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iI0MyMTg1QiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkJyaWRhbCBDbG9zZXVwPC90ZXh0Pjwvc3ZnPg==" alt="Bridal Closeup">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjRkVERjVCIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iI0ZGNTYwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPlBhcnR5IExvb2sgU21va2V5PC90ZXh0Pjwvc3ZnPg==" alt="Party Smokey Eyes">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjRkZDQkFGIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iI0ZGMjI1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkJyaWRhbCBMZWhlbmdhPC90ZXh0Pjwvc3ZnPg==" alt="Bridal Lehenga">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjQThFREVBIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzBEQjQ5NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPk5hdHVyYWwgR2xhbTwvdGV4dD48L3N2Zz4=" alt="Natural Glam">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjRkY2QjYxIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iI0ZGRiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkJvbGQgTGlwczwvdGV4dD48L3N2Zz4=" alt="Bold Lips Party">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjRjVFQjJGIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzMzMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkV2ZXJ5ZGF5IE1ha2VvdmVyPC90ZXh0Pjwvc3ZnPg==" alt="Everyday Makeover">
+        </div>
+        <p style="text-align: center; margin-top: 2rem; font-style: italic;">Real client transformations showcasing bridal, party, and everyday looks [web:1][web:3].</p>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Visit Us</h2>
+        <div class="address">
+            <h3>📍 Sammy Makeovers</h3>
+            <p><strong>Dr Panjabrao Colony, Arvi Rd,</strong></p>
+            <p><strong>near Mahalaxmi Plaza, Pipri,</strong></p>
+            <p><strong>Wardha, Maharashtra 442001</strong></p>
+            <div class="contact">
+                <a href="tel:+917xxxxxxxxx" class="btn">📞 Book Appointment</a>
+                <a href="mailto:sammymakeovers@gmail.com" class="btn">✉️ Email Us</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Sammy Makeovers. All rights reserved. | Wardha's Favorite Makeup Studio</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
