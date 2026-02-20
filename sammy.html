@@ -11,10 +11,10 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: #f5f7fa;
         }
         .container {
             max-width: 1200px;
@@ -22,7 +22,7 @@
             padding: 0 20px;
         }
         header {
-            background: linear-gradient(to right, #ff6b6b, #feca57);
+            background: #ff6b6b;
             color: white;
             padding: 1rem 0;
             text-align: center;
@@ -34,10 +34,9 @@
         }
         header p {
             font-size: 1.2rem;
-            opacity: 0.9;
         }
         nav {
-            background: rgba(255,255,255,0.95);
+            background: white;
             padding: 1rem 0;
             text-align: center;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -50,33 +49,18 @@
             text-decoration: none;
             margin: 0 1.5rem;
             font-weight: bold;
-            transition: color 0.3s;
         }
         nav a:hover {
             color: #ff6b6b;
         }
         .hero {
-            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+            background: #ff9a9e;
             height: 60vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
-            position: relative;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0,0,0,0.3);
-        }
-        .hero-content {
-            z-index: 1;
-            max-width: 800px;
         }
         .hero h2 {
             font-size: 3rem;
@@ -98,7 +82,6 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin-bottom: 3rem;
         }
         .service-card {
             background: white;
@@ -106,11 +89,6 @@
             border-radius: 15px;
             text-align: center;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
         }
         .service-icon {
             font-size: 4rem;
@@ -125,24 +103,17 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1rem;
-            margin-bottom: 2rem;
         }
         .gallery-placeholder {
             height: 300px;
-            background: linear-gradient(45deg, #ffecd2, #fcb69f);
+            background: #ffecd2;
             border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.2rem;
             color: #333;
-            transition: transform 0.3s;
-            cursor: pointer;
             border: 3px dashed #ff6b6b;
-        }
-        .gallery-placeholder:hover {
-            transform: scale(1.05);
-            background: linear-gradient(45deg, #fcb69f, #ffecd2);
         }
         .address {
             background: white;
@@ -162,23 +133,15 @@
             font-size: 1.2rem;
             margin-bottom: 0.5rem;
         }
-        .contact {
-            text-align: center;
-            margin-top: 2rem;
-        }
         .btn {
             display: inline-block;
-            background: linear-gradient(to right, #ff6b6b, #feca57);
+            background: #ff6b6b;
             color: white;
             padding: 1rem 2rem;
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
-            transition: transform 0.3s;
             margin: 0.5rem;
-        }
-        .btn:hover {
-            transform: scale(1.05);
         }
         footer {
             background: #333;
@@ -201,7 +164,7 @@
 <body>
     <header>
         <div class="container">
-            <h1>✨ Sammy Makeovers ✨</h1>
+            <h1>Sammy Makeovers</h1>
             <p>Your Premier Destination for Bridal, Party & Everyday Glam</p>
         </div>
     </header>
@@ -216,7 +179,7 @@
     </nav>
 
     <section id="home" class="hero">
-        <div class="hero-content">
+        <div class="container">
             <h2>Transform Your Beauty</h2>
             <p>Professional Bridal Makeup | Party Looks | Everyday Makeovers in Wardha</p>
         </div>
@@ -226,17 +189,17 @@
         <h2>Our Services</h2>
         <div class="services-grid">
             <div class="service-card">
-                <div class="service-icon">💍</div>
+                <div class="service-icon">Bridal</div>
                 <h3>Bridal Makeup</h3>
                 <p>Flawless bridal looks that last all wedding functions. HD makeup, airbrush techniques, traditional & modern styles.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">🎉</div>
+                <div class="service-icon">Party</div>
                 <h3>Party Makeup</h3>
                 <p>Stunning party looks for sangeet, reception, engagements. Smokey eyes, bold lips, glamorous styles.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">💄</div>
+                <div class="service-icon">Daily</div>
                 <h3>Everyday Makeovers</h3>
                 <p>Office looks, casual glam, salon services including hair styling, nail art, and complete makeovers.</p>
             </div>
@@ -253,39 +216,27 @@
             <div class="gallery-placeholder">Bold Lips Party</div>
             <div class="gallery-placeholder">Everyday Makeover</div>
         </div>
-        <p style="text-align: center; margin-top: 2rem; font-style: italic;">Ready for your real client photos! Upload stunning bridal and party transformations here.</p>
+        <p style="text-align: center; margin-top: 2rem;">Ready for your real client photos!</p>
     </section>
 
     <section id="contact" class="container">
         <h2>Visit Us</h2>
         <div class="address">
-            <h3>📍 Sammy Makeovers</h3>
-            <p><strong>Dr Panjabrao Colony, Arvi Rd,</strong></p>
-            <p><strong>near Mahalaxmi Plaza, Pipri,</strong></p>
-            <p><strong>Wardha, Maharashtra 442001</strong></p>
-            <div class="contact">
-                <a href="tel:+917xxxxxxxxx" class="btn">📞 Book Appointment</a>
-                <a href="mailto:sammymakeovers@gmail.com" class="btn">✉️ Email Us</a>
+            <h3>Sammy Makeovers</h3>
+            <p>Dr Panjabrao Colony, Arvi Rd,</p>
+            <p>near Mahalaxmi Plaza, Pipri,</p>
+            <p>Wardha, Maharashtra 442001</p>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="#" class="btn">Book Appointment</a>
+                <a href="#" class="btn">Email Us</a>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Sammy Makeovers. All rights reserved. | Wardha's Favorite Makeup Studio</p>
+            <p>2026 Sammy Makeovers. All rights reserved.</p>
         </div>
     </footer>
-
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
 </body>
 </html>
