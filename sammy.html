@@ -56,7 +56,7 @@
             color: #ff6b6b;
         }
         .hero {
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f8bbd9" width="1200" height="600"/><text x="600" y="300" font-size="40" text-anchor="middle" fill="%23c2185b" font-family="Arial">Bridal Glamour</text></svg>') center/cover;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
             height: 60vh;
             display: flex;
             align-items: center;
@@ -72,7 +72,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0,0,0,0.5);
+            background: rgba(0,0,0,0.3);
         }
         .hero-content {
             z-index: 1;
@@ -112,11 +112,8 @@
             transform: translateY(-10px);
             box-shadow: 0 20px 40px rgba(0,0,0,0.2);
         }
-        .service-card img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 10px;
+        .service-icon {
+            font-size: 4rem;
             margin-bottom: 1rem;
         }
         .service-card h3 {
@@ -128,17 +125,24 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1rem;
+            margin-bottom: 2rem;
         }
-        .gallery img {
-            width: 100%;
+        .gallery-placeholder {
             height: 300px;
-            object-fit: cover;
+            background: linear-gradient(45deg, #ffecd2, #fcb69f);
             border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: #333;
             transition: transform 0.3s;
             cursor: pointer;
+            border: 3px dashed #ff6b6b;
         }
-        .gallery img:hover {
+        .gallery-placeholder:hover {
             transform: scale(1.05);
+            background: linear-gradient(45deg, #fcb69f, #ffecd2);
         }
         .address {
             background: white;
@@ -222,23 +226,17 @@
         <h2>Our Services</h2>
         <div class="services-grid">
             <div class="service-card">
-                <div style="background: linear-gradient(45deg, #ff9a9e, #fecfef); height: 250px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-                    <span style="font-size: 4rem;">💍</span>
-                </div>
+                <div class="service-icon">💍</div>
                 <h3>Bridal Makeup</h3>
                 <p>Flawless bridal looks that last all wedding functions. HD makeup, airbrush techniques, traditional & modern styles.</p>
             </div>
             <div class="service-card">
-                <div style="background: linear-gradient(45deg, #a8edea, #fed6e3); height: 250px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-                    <span style="font-size: 4rem;">🎉</span>
-                </div>
+                <div class="service-icon">🎉</div>
                 <h3>Party Makeup</h3>
                 <p>Stunning party looks for sangeet, reception, engagements. Smokey eyes, bold lips, glamorous styles.</p>
             </div>
             <div class="service-card">
-                <div style="background: linear-gradient(45deg, #ffecd2, #fcb69f); height: 250px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-                    <span style="font-size: 4rem;">💄</span>
-                </div>
+                <div class="service-icon">💄</div>
                 <h3>Everyday Makeovers</h3>
                 <p>Office looks, casual glam, salon services including hair styling, nail art, and complete makeovers.</p>
             </div>
@@ -248,15 +246,14 @@
     <section id="gallery" class="container">
         <h2>Gallery</h2>
         <div class="gallery">
-            <!-- Authentic-looking placeholder images based on bridal/party themes from web searches [web:1][web:3] -->
-            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjRkY5QTlFIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iI0MyMTg1QiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkJyaWRhbCBDbG9zZXVwPC90ZXh0Pjwvc3ZnPg==" alt="Bridal Closeup">
-            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjRkVERjVCIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iI0ZGNTYwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPlBhcnR5IExvb2sgU21va2V5PC90ZXh0Pjwvc3ZnPg==" alt="Party Smokey Eyes">
-            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjRkZDQkFGIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iI0ZGMjI1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkJyaWRhbCBMZWhlbmdhPC90ZXh0Pjwvc3ZnPg==" alt="Bridal Lehenga">
-            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjQThFREVBIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzBEQjQ5NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPk5hdHVyYWwgR2xhbTwvdGV4dD48L3N2Zz4=" alt="Natural Glam">
-            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjRkY2QjYxIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iI0ZGRiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkJvbGQgTGlwczwvdGV4dD48L3N2Zz4=" alt="Bold Lips Party">
-            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjRjVFQjJGIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzMzMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkV2ZXJ5ZGF5IE1ha2VvdmVyPC90ZXh0Pjwvc3ZnPg==" alt="Everyday Makeover">
+            <div class="gallery-placeholder">Bridal Closeup</div>
+            <div class="gallery-placeholder">Party Smokey Eyes</div>
+            <div class="gallery-placeholder">Bridal Lehenga</div>
+            <div class="gallery-placeholder">Natural Glam</div>
+            <div class="gallery-placeholder">Bold Lips Party</div>
+            <div class="gallery-placeholder">Everyday Makeover</div>
         </div>
-        <p style="text-align: center; margin-top: 2rem; font-style: italic;">Real client transformations showcasing bridal, party, and everyday looks [web:1][web:3].</p>
+        <p style="text-align: center; margin-top: 2rem; font-style: italic;">Ready for your real client photos! Upload stunning bridal and party transformations here.</p>
     </section>
 
     <section id="contact" class="container">
